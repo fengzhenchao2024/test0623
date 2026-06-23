@@ -1,42 +1,26 @@
-export type Resolution = '480p' | '720p' | '1080p';
-
-export type AspectRatio = '21:9' | '16:9' | '4:3' | '3:4' | '9:16';
-
-export type EngineModel = 'seedance2.0' | 'seedance2.0-fast';
-
-export interface UploadedImage {
-  id: string;
-  name: string;
-  url: string; // Base64 data URL string for local preview
-  size: string; // Formatting like "1.2 MB"
+export interface LyricLine {
+  time: number; // in seconds
+  text: string;
 }
 
-export type GeneratorStatus = 'idle' | 'generating' | 'success' | 'failed';
-
-export interface GenerationParams {
-  prompt: string;
-  images: UploadedImage[];
-  resolution: Resolution;
-  duration: number; // 4 to 15 seconds
-  aspectRatio: AspectRatio;
+export interface Track {
+  id: string;
+  title: string;
+  artist: string;
+  album: string;
+  coverUrl: string;
+  audioUrl: string;
+  genre: string;
+  duration: string; // MM:SS display format
+  lyrics: LyricLine[];
 }
 
-export interface TimelineStep {
-  id: string;
-  label: string;
-  description: string;
-  status: 'pending' | 'processing' | 'completed';
-  minProgress: number; // For simulating the progress bar
-  maxProgress: number;
-}
-
-export interface GenerationHistoryItem {
-  id: string;
-  timestamp: number;
-  params: GenerationParams;
-  videoUrl: string;
+export interface PlayerState {
+  isPlaying: boolean;
+  currentTime: number;
   duration: number;
-  resolution: Resolution;
-  aspectRatio: AspectRatio;
-  prompt: string;
+  volume: number;
+  isMuted: boolean;
+  isLooping: boolean;
+  isShuffling: boolean;
 }

@@ -1,6 +1,6 @@
 {
-  "name": "Seedance Video Generator",
-  "description": "Seedance 2.0 视频生成界面，支持提示词输入、多图上传、分辨率选择、长宽比和生成时间微调，并附带直观的高真实感生成模拟。",
+  "name": "Nebula Aura Music Player",
+  "description": "极具未来感与声学美感的高保真音乐播放器，配有流动歌词与多色动态频谱效果。",
   "requestFramePermissions": [],
   "majorCapabilities": [
     "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
