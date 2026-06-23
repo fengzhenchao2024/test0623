@@ -1,0 +1,8 @@
+{
+  "name": "Seedance Video Generator",
+  "description": "Seedance 2.0 视频生成界面，支持提示词输入、多图上传、分辨率选择、长宽比和生成时间微调，并附带直观的高真实感生成模拟。",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
